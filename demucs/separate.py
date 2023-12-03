@@ -43,9 +43,9 @@ def get_parser():
                         "--device",
                         default=(
                             "cuda"
-                            if torch.cuda.is_available()
+                            if th.cuda.is_available()
                             else "mps"
-                            if torch.backends.mps.is_available()
+                            if th.backends.mps.is_available()
                             else "cpu"
                         ),
                         help="Device to use, default is cuda if available else cpu")
